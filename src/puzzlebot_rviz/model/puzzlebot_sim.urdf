@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot name="PuzzleBot">
+   <link name="base_link">
+      <visual>
+         <origin rpy="0.0 0.0 0.0" xyz="0 0 0.05"/>
+         <geometry>
+            <mesh filename="file://$(find puzzlebot_rviz)/model/PuzzleBot.stl"/>
+         </geometry>
+         <material name="white">
+            <color rgba="1 1 1 1"/>
+         </material>
+      </visual>
+   </link>
+</robot>

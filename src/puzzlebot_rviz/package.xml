@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+
+  <name>puzzlebot_rviz</name>
+
+  <version>0.0.1</version>
+
+  <description>The puzzlebot_rviz package</description>
+
+  <maintainer email="almarebeca.velascoolmos@manchester.ac.uk">Rebeca Velasco</maintainer>
+  <maintainer email="christopher.blum@manchester-robotics.com">Christopher Blum</maintainer>
+
+  <license>BSP</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+
+  </export>
+</package>
