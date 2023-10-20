@@ -1,0 +1,1503 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='Puzzlebot_sennaria1'>
+      <pose>3.46875 2.16157 0 0 -0 0</pose>
+      <link name='Wall_10'>
+        <collision name='Wall_10_Collision'>
+          <geometry>
+            <box>
+              <size>3 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_10_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-4.925 2.425 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_11'>
+        <collision name='Wall_11_Collision'>
+          <geometry>
+            <box>
+              <size>10 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_11_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>10 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-0 3.85 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_12'>
+        <collision name='Wall_12_Collision'>
+          <geometry>
+            <box>
+              <size>3 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_12_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>4.925 2.425 0 0 -0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_14'>
+        <collision name='Wall_14_Collision'>
+          <geometry>
+            <box>
+              <size>10 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_14_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>10 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-0 -3.85 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_15'>
+        <collision name='Wall_15_Collision'>
+          <geometry>
+            <box>
+              <size>5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_15_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>4.925 -1.425 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_3'>
+        <collision name='Wall_3_Collision'>
+          <geometry>
+            <box>
+              <size>5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_3_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Bricks</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-4.925 -1.425 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <state world_name='default'>
+      <sim_time>1104 694000000</sim_time>
+      <real_time>503 893844582</real_time>
+      <wall_time>1697726570 443703665</wall_time>
+      <iterations>500952</iterations>
+      <model name='Puzzlebot_sennaria1'>
+        <pose>0.01457 -0.00183 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_10'>
+          <pose>-4.91043 2.42317 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_11'>
+          <pose>0.014573 3.84817 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_12'>
+          <pose>4.93957 2.42317 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_14'>
+          <pose>0.014573 -3.85183 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_15'>
+          <pose>4.93957 -1.42683 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_3'>
+          <pose>-4.91043 -1.42683 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_1'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_1_link'>
+          <pose>-3.750000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_2'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_2_link'>
+          <pose>-4.800000 -2.500000 0.5 1.570796 0 1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_3'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_3_link'>
+          <pose>-4.800000 -1.500000 0.5 1.570796 0 1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_4'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_4_link'>
+          <pose>-4.800000 -0.500000 0.5 1.570796 0 1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_5'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_5_link'>
+          <pose>-4.800000 0.500000 0.5 1.570796 0 1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_6'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_6_link'>
+          <pose>-4.800000 1.500000 0.5 1.570796 0 1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_7'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_7_link'>
+          <pose>-4.800000 2.500000 0.5 1.570796 0 1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_8'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_8_link'>
+          <pose>-2.750000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_9'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_9_link'>
+          <pose>-1.750000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_10'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_10_link'>
+          <pose>-0.750000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_11'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_11_link'>
+          <pose>0.250000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_12'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_12_link'>
+          <pose>1.250000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_13'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_13_link'>
+          <pose>2.250000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_14'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_14_link'>
+          <pose>3.250000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_15'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_15_link'>
+          <pose>4.250000 -3.750000 0.5 1.570796 0 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_16'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_16_link'>
+          <pose>4.800000 -2.500000 0.5 -1.570796 0 -1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_17'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_17_link'>
+          <pose>4.800000 -1.500000 0.5 -1.570796 0 -1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_18'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_18_link'>
+          <pose>4.800000 -0.500000 0.5 -1.570796 0 -1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_19'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_19_link'>
+          <pose>4.800000 0.500000 0.5 -1.570796 0 -1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_20'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_20_link'>
+          <pose>4.800000 1.500000 0.5 -1.570796 0 -1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_21'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_21_link'>
+          <pose>4.800000 2.500000 0.5 -1.570796 0 -1.570796</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_22'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_22_link'>
+          <pose>-3.750000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_23'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_23_link'>
+          <pose>-2.750000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_24'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_24_link'>
+          <pose>-1.750000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_25'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_25_link'>
+          <pose>-0.750000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_26'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_26_link'>
+          <pose>0.250000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_27'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_27_link'>
+          <pose>1.250000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_28'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_28_link'>
+          <pose>2.250000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_29'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_29_link'>
+          <pose>3.250000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='aruco_30'>
+        <pose>0 0 0 0 0 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='marker_30_link'>
+          <pose>4.250000 3.750000 0.5 1.570796 1.570796 3.141593</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 1.57</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 1.57</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='puzzlebot'>
+        <pose>-0.514999 0.800177 0.048998 -2e-06 1.8e-05 -1.57001</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>-0.514999 0.800177 0.048998 -2e-06 1.8e-05 -1.57001</pose>
+          <velocity>0 2e-06 3e-06 -3.4e-05 1e-06 0</velocity>
+          <acceleration>-0 0 -0 0 -0 0</acceleration>
+          <wrench>-0 0 -0 0 -0 0</wrench>
+        </link>
+        <link name='left_wheel'>
+          <pose>-0.424959 0.750248 0.048997 -9e-06 0.002133 -1.57001</pose>
+          <velocity>1e-06 2e-06 1.1e-05 -3.1e-05 1.4e-05 0</velocity>
+          <acceleration>-0 0 -0 -0.002885 2e-06 -0</acceleration>
+          <wrench>-0 0 -0 0 -0 0</wrench>
+        </link>
+        <link name='right_wheel'>
+          <pose>-0.604959 0.750106 0.048997 6e-06 0.002035 -1.57001</pose>
+          <velocity>-1e-06 2e-06 1e-05 -3.2e-05 -1.5e-05 0</velocity>
+          <acceleration>-0 0 -0 -0.002082 2e-06 0</acceleration>
+          <wrench>-0 0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-1.28682 -1.10111 4.31152 0 1.08272 -3.06721</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='aruco_1'>
+      <static>1</static>
+      <link name='marker_1_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_1'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_1/materials/scripts</uri>
+              <uri>model://aruco_1/materials/textures</uri>
+              <name>aruco/marker_1</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_2'>
+      <static>1</static>
+      <link name='marker_2_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_2'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_2/materials/scripts</uri>
+              <uri>model://aruco_2/materials/textures</uri>
+              <name>aruco/marker_2</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_3'>
+      <static>1</static>
+      <link name='marker_3_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_3'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_3/materials/scripts</uri>
+              <uri>model://aruco_3/materials/textures</uri>
+              <name>aruco/marker_3</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_4'>
+      <static>1</static>
+      <link name='marker_4_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_4'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4/materials/scripts</uri>
+              <uri>model://aruco_4/materials/textures</uri>
+              <name>aruco/marker_4</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_5'>
+      <static>1</static>
+      <link name='marker_5_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_5'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_5/materials/scripts</uri>
+              <uri>model://aruco_5/materials/textures</uri>
+              <name>aruco/marker_5</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_6'>
+      <static>1</static>
+      <link name='marker_6_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_6'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_6/materials/scripts</uri>
+              <uri>model://aruco_6/materials/textures</uri>
+              <name>aruco/marker_6</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_7'>
+      <static>1</static>
+      <link name='marker_7_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_7'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_7/materials/scripts</uri>
+              <uri>model://aruco_7/materials/textures</uri>
+              <name>aruco/marker_7</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_8'>
+      <static>1</static>
+      <link name='marker_8_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_8'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_8/materials/scripts</uri>
+              <uri>model://aruco_8/materials/textures</uri>
+              <name>aruco/marker_8</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_9'>
+      <static>1</static>
+      <link name='marker_9_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_9'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_9/materials/scripts</uri>
+              <uri>model://aruco_9/materials/textures</uri>
+              <name>aruco/marker_9</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_10'>
+      <static>1</static>
+      <link name='marker_10_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_10'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_10/materials/scripts</uri>
+              <uri>model://aruco_10/materials/textures</uri>
+              <name>aruco/marker_10</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_11'>
+      <static>1</static>
+      <link name='marker_11_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_11'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_11/materials/scripts</uri>
+              <uri>model://aruco_11/materials/textures</uri>
+              <name>aruco/marker_11</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_12'>
+      <static>1</static>
+      <link name='marker_12_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_12'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_12/materials/scripts</uri>
+              <uri>model://aruco_12/materials/textures</uri>
+              <name>aruco/marker_12</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_13'>
+      <static>1</static>
+      <link name='marker_13_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_13'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_13/materials/scripts</uri>
+              <uri>model://aruco_13/materials/textures</uri>
+              <name>aruco/marker_13</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_14'>
+      <static>1</static>
+      <link name='marker_14_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_14'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_14/materials/scripts</uri>
+              <uri>model://aruco_14/materials/textures</uri>
+              <name>aruco/marker_14</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_15'>
+      <static>1</static>
+      <link name='marker_15_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_15'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_15/materials/scripts</uri>
+              <uri>model://aruco_15/materials/textures</uri>
+              <name>aruco/marker_15</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_16'>
+      <static>1</static>
+      <link name='marker_16_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_16'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_16/materials/scripts</uri>
+              <uri>model://aruco_16/materials/textures</uri>
+              <name>aruco/marker_16</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_17'>
+      <static>1</static>
+      <link name='marker_17_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_17'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_17/materials/scripts</uri>
+              <uri>model://aruco_17/materials/textures</uri>
+              <name>aruco/marker_17</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_18'>
+      <static>1</static>
+      <link name='marker_18_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_18'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_18/materials/scripts</uri>
+              <uri>model://aruco_18/materials/textures</uri>
+              <name>aruco/marker_18</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_19'>
+      <static>1</static>
+      <link name='marker_19_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_19'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_19/materials/scripts</uri>
+              <uri>model://aruco_19/materials/textures</uri>
+              <name>aruco/marker_19</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_20'>
+      <static>1</static>
+      <link name='marker_20_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_20'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_20/materials/scripts</uri>
+              <uri>model://aruco_20/materials/textures</uri>
+              <name>aruco/marker_20</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_21'>
+      <static>1</static>
+      <link name='marker_21_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_21'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_21/materials/scripts</uri>
+              <uri>model://aruco_21/materials/textures</uri>
+              <name>aruco/marker_21</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_22'>
+      <static>1</static>
+      <link name='marker_22_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_22'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_22/materials/scripts</uri>
+              <uri>model://aruco_22/materials/textures</uri>
+              <name>aruco/marker_22</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_23'>
+      <static>1</static>
+      <link name='marker_23_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_23'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_23/materials/scripts</uri>
+              <uri>model://aruco_23/materials/textures</uri>
+              <name>aruco/marker_23</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_24'>
+      <static>1</static>
+      <link name='marker_24_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_24'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_24/materials/scripts</uri>
+              <uri>model://aruco_24/materials/textures</uri>
+              <name>aruco/marker_24</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_25'>
+      <static>1</static>
+      <link name='marker_25_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_25'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_25/materials/scripts</uri>
+              <uri>model://aruco_25/materials/textures</uri>
+              <name>aruco/marker_25</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_26'>
+      <static>1</static>
+      <link name='marker_26_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_26'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_26/materials/scripts</uri>
+              <uri>model://aruco_26/materials/textures</uri>
+              <name>aruco/marker_26</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_27'>
+      <static>1</static>
+      <link name='marker_27_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_27'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_27/materials/scripts</uri>
+              <uri>model://aruco_27/materials/textures</uri>
+              <name>aruco/marker_27</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_28'>
+      <static>1</static>
+      <link name='marker_28_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_28'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_28/materials/scripts</uri>
+              <uri>model://aruco_28/materials/textures</uri>
+              <name>aruco/marker_28</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_29'>
+      <static>1</static>
+      <link name='marker_29_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_29'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_29/materials/scripts</uri>
+              <uri>model://aruco_29/materials/textures</uri>
+              <name>aruco/marker_29</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+    <model name='aruco_30'>
+      <static>1</static>
+      <link name='marker_30_link'>
+        <pose>0 0 0 0 0 0</pose>
+        <visual name='visual_marker_30'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>0.342453 0.342453 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_30/materials/scripts</uri>
+              <uri>model://aruco_30/materials/textures</uri>
+              <name>aruco/marker_30</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 0 0 0</pose>
+    </model>
+  </world>
+</sdf>

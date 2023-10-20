@@ -1,0 +1,8 @@
+prefix=/home/zzx/Puzzlebot/devel
+
+Name: multi_points_tracking
+Description: Description of multi_points_tracking
+Version: 0.0.0
+Cflags: -I/home/zzx/Puzzlebot/src/multi_points_tracking/include
+Libs: -L${prefix}/lib -lmulti_points_tracking
+Requires: 
