@@ -1,0 +1,31 @@
+numer of particles : 50
+duration(s): 175.461
+number of pose : 2501
+path length(m) : 26.684
+
+pf_ape:
+	max: 0.500512
+	mean: 0.110183
+	median: 0.098148
+	min: 0.0000
+	rmse: 0.120500
+	sse: 26.107429
+	std: 0.048784
+	
+encoder:
+	max: 0.972142
+	mean: 0.128783
+	median: 0.125684
+	min: 0.031929
+	rmse: 0.140327
+	sse: 26.564093
+	std: 0.055737
+	
+	max: 0.393912
+	mean: 0.104601
+	median: 0.107831
+	min: 0.003359
+	rmse: 0.115616
+	sse: 16.281004
+	std: 0.049251
+
