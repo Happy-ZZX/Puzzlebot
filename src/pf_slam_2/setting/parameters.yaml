@@ -1,0 +1,74 @@
+## @package parameters
+#  Parameters used in the aruco_slam.
+
+covariance:
+    Q_k: 0.01           ## Error coefficient of encoder
+    R_x: 100         ## Error coefficient of observation x
+    R_y: 100          ## Error coefficient of observation y
+    R_theta: 10      ## Error coefficient of observation theta
+
+odom:
+    kl: 0.05    ## Left wheel radius
+    kr: 0.05    ## Right wheel radius
+    b: 0.09     ## Half of robot wheelbase
+
+aruco:
+    markers_dictionary: 16 ## cv::aruco::PREDEFINED_DICTIONARY_NAME
+    marker_length: 0.27    ## Length of the aruco markers, without the white edge, the unit is a meter
+
+frame:
+    world_frame: "world"                                ##Galobal frame name
+    camera_frame_optical: "camera_frame_optical"        ##Image frame name
+    robot_frame_base: "base_link"                       ##Robot base link frame name
+
+topic:
+    image: /camera/image_raw    ## Subscribed topic for image msg including image sensor_msgs::ImageConstPtr and camera info sensor_msgs::CameraInfoConstPtr
+    encoder: /encoder           ## Subscribed topic for encoder msg including vector with two wheels' anguler valocity std_msgs::Float32MultiArray::ConstPtr
+
+# map: 
+#     map_file: "/home/liangyichen/catkin_ws/src/aruco_slam/map/map.txt" #Direction of map file with accurate information of real map
+const:
+    USEFUL_DISTANCE_THRESHOLD_: 4
+
+camera:
+    fx: 476.7030836014194
+    fy: 476.7030836014194
+    cx: 400.5
+    cy: 400.5
+
+    k1: 0
+    k2: 0
+    p1: 0
+    p2: 0
+    k3: 0
+
+robot:
+    r2c_translation: [0.09, 0.000, 0.048] ## x, y, z, target_frame: robot_frame_base source_frame: camera_frame_optical
+    r2c_rotation: [-0.500, 0.500, -0.500, 0.500] ##x, y, z, w
+
+extrinsic:
+    Trc: [1322.967529, 0, 610.768678, 0, 0, 1322.2181405, 400.266696, 0, 0, 0, 1, 0]
+
+particle:
+    number: 50
+#camera:
+#     fx: 1061.6538553425996
+#     fy: 1061.6538553425996
+#     cx: 640.5
+#     cy: 360.5
+
+#     k1: 0.155182
+#     k2: -0.278072
+#     p1: 0.000937
+#     p2: -0.001910
+#     k3: 0.000000
+
+# extrinsic:
+#     Trc: [1300.127197265625, 0, 630.215390285608, 0, 0, 1300.670166015625, 380.1702884455881, 0, 0, 0, 1, 0]
+
+
+
+
+
+
+

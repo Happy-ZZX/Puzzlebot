@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "dense": "cpp",
+        "string": "cpp",
+        "type_traits": "cpp",
+        "cmath": "cpp"
+    }
+}

@@ -1,0 +1,12 @@
+#include <ekf_slam/aruco_ekf_slam.h>
+
+int main(int argc, char **argv)
+{
+
+    ros::init(argc, argv, "reslam_odom");
+    ArUcoEKFSLAM slam;
+    ros::spin();
+
+    ros::shutdown();
+    return 0;
+}

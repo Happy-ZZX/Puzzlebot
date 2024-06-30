@@ -1,0 +1,22 @@
+duration(s): 184.149
+number of pose : 3699
+path length(m) : 26.80
+
+ekf_ape:
+	max: 0.464167
+	mean: 0.0102491
+	median: 0.101110
+	min: 0.049064
+	rmse: 0.109568
+	sse: 12.0869541
+	std: 0.038741
+	
+encoder:
+	max: 0.972142
+	mean: 0.128783
+	median: 0.125684
+	min: 0.031929
+	rmse: 0.140327
+	sse: 26.564093
+	std: 0.055737
+
